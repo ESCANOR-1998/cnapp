@@ -1,0 +1,16 @@
+body{
+//  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.7em;
+
+font-family: 'Ubuntu Condensed', sans-serif;
+background: linear-gradient(to right,lightblue,lightgreen);
+
+}
+.logo img{
+  width: 10%;
+
+}
+a{
+  color: red;
+  text-decoration: none;
+}

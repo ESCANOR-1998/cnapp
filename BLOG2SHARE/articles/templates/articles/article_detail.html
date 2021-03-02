@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+
+<div class="container">
+
+  <div class="article_detail">
+
+    <div class="article">
+      <img src="{{article.photo.url}}"/>
+      <h2>{{article.title}}</h2>
+      <p>{{article.body}}</p>
+      <p>{{article.date}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

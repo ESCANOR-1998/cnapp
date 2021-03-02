@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<style media="screen">
+  #id_username{
+    width: 100%;
+  }
+  #id_password{
+    width: 100%;
+  }
+  button{
+    padding: : 1em;
+  }
+</style>
+<h1 style="font-size:2em">LOGIN</h1>
+<hr>
+<form class="site-form" action="{% url 'accounts:login' %}" method="post">
+  {% csrf_token %}
+  {{form}}
+  {% if request.GET.next %}
+  <br>
+  <input type="hidden" name="next" value="{{request.GET.next}}"> <br>
+  {% endif %}
+  <br>
+  <br>
+  <button type="submit" value="="Login">LOGIN</button>
+
+</form>
+{% endblock %}

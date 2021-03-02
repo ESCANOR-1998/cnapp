@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<style media="screen">
+  span .helptext{
+    width: 100%;
+  }
+  label{
+    width: 100%;
+  }
+  #id_username, #id_password1, #id_password2{
+    width: 100%;
+  }
+</style>
+<h1>SIGN UP</h1>
+<hr>
+<form class="site-form" action="/accounts/signup/" method="post">
+  {% csrf_token %}
+  {{form}}
+  <br>
+  <button type="submit" value="="Signup">SIGNUP</button>
+</form>
+{% endblock %}

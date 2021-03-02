@@ -1,0 +1,32 @@
+ {% extends "base_layout.html" %}
+
+
+{% block content %}
+
+<style>
+.article{
+  border: 2px solid red;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 5px 10px grey;
+}
+</style>
+
+<h1 style="font-family: 'Open Sans Condensed', sans-serif;">ARTICLE LIST</h1>
+<hr>
+<div class="articles">
+{% for article in articles %}
+<div class="article">
+<h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
+
+
+<p>{{article.snippet}}</p>
+<p>{{article.date}}</p>
+<p class="author">POSTED BY {{article.author.username}}</p>
+
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

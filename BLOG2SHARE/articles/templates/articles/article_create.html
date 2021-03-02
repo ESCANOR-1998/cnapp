@@ -1,0 +1,32 @@
+{%  extends 'base_layout.html' %}
+
+{% block content %}
+<div class = "create-article">
+
+  <style media="screen">
+    #id_title{
+      width: 100%;
+    }
+    label{
+      width: 100%;
+    }
+    #id_thumbnail{
+      width: 100%;
+    }
+  </style>
+
+  <h2>CREATE A AWESOME NEW ARTICLE!!!</h2>
+
+  <br>
+  <form class="site-form" action="{% url 'articles:create' %}"  method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    {{form}}
+
+    <input type="submit" value="CREATE">
+
+  </form>
+
+</div>
+
+
+{% endblock %}
